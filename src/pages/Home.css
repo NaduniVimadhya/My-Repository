@@ -1,0 +1,191 @@
+/* src/pages/Home.css */
+.home-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 4rem;
+}
+
+/* Text Section styling */
+.home-page-text {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.home-page-text h1 {
+  color: var(--text-secondary);
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.name-gradient {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 540px;
+}
+
+/* Buttons styling */
+.home-actions {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+
+/* Image Section Styling */
+.home-page-img-wrapper {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Soft glowing sphere behind profile picture */
+.home-page-img-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 320px;
+  max-height: 320px;
+  background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+  filter: blur(40px);
+  z-index: 1;
+}
+
+/* Fixes the 1500px distorted width and overflow bug */
+.home-page-img {
+  position: relative;
+  z-index: 2;
+  width: 280px;
+  height: 380px; /* Rectangular height */
+  border-radius: 20px; /* Modern rounded corners */
+  box-shadow: var(--shadow-lg);
+  overflow: hidden; /* Clips the image to the card's rounded corners */
+}
+
+.home-page-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.5s ease;
+}
+
+.home-page-img:hover img {
+  transform: scale(1.05);
+}
+
+/* Keyframe Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Responsive Grid styling */
+@media (max-width: 992px) {
+  .home-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 3rem;
+  }
+  
+  .home-page-text {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .name-gradient {
+    font-size: 2.8rem;
+  }
+  
+  .subtitle {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page-img {
+    width: 220px;
+    height: 300px; /* Maintain rectangular ratio on mobile */
+  }
+  
+  .name-gradient {
+    font-size: 2.4rem;
+  }
+  
+  .home-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}

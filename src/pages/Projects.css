@@ -1,0 +1,145 @@
+/* src/pages/Projects.css */
+.projects-page {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.projects-header {
+  text-align: left;
+}
+
+.projects-header h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Projects Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Project Card styling */
+.project-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Styling for the new image container at the top of the card */
+.project-card-image {
+  width: calc(100% + 4rem); /* Counteracts the card's 2rem default side padding */
+  margin-left: -2rem;       /* Aligns the outer image container flush to the left boundary */
+  margin-top: -2rem;        /* Aligns the outer image container flush to the top boundary */
+  margin-bottom: 1.5rem;
+  height: 180px;            /* Set card preview window height */
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* Prevents your layout image from distorting stretching */
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.project-icon {
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: rgba(59, 130, 246, 0.08);
+}
+
+.github-icon-link {
+  color: var(--text-muted);
+}
+
+.github-icon-link:hover {
+  color: var(--text-primary);
+}
+
+.project-card-content {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.project-card-content h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.project-card-content p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.project-card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+.project-tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-badge {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+}
+
+.project-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: flex-start;
+}
+
+.project-link span {
+  /* static arrow */
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+}
