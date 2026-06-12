@@ -37,7 +37,7 @@ function Projects() {
           <div key={idx} className="project-card">
             {project.img && (
               <div className="project-card-image">
-                <img src={project.img} alt={project.title} />
+                <img src={process.env.PUBLIC_URL + project.img} alt={project.title} />
               </div>
             )}
             <div className="project-card-header">
