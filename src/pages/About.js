@@ -22,7 +22,7 @@ function About() {
   ];
 
   return (
-    <div className="about-page">
+    <div className="about-page page-transition">
       <div className="about-header">
         <h2>About Me</h2>
       </div>

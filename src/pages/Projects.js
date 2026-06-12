@@ -27,7 +27,7 @@ function Projects() {
   ];
 
   return (
-    <div className="projects-page">
+    <div className="projects-page page-transition">
       <div className="projects-header">
         <h2>My Projects</h2>
       </div>

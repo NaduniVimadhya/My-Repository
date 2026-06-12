@@ -31,11 +31,14 @@
   border-radius: 16px;
   padding: 2.5rem;
   box-shadow: var(--shadow-sm);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .contact-info-panel:hover,
 .contact-form-panel:hover {
-  border-color: var(--border-hover);
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md), 0 8px 25px rgba(59, 130, 246, 0.05);
 }
 
 .contact-info-panel h3,

@@ -50,6 +50,16 @@
   border-radius: 16px;
   padding: 2rem;
   box-shadow: var(--shadow-sm);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-bio-card:hover,
+.about-education-card:hover,
+.skill-cat-card:hover,
+.aspiration-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-md), 0 10px 20px rgba(59, 130, 246, 0.05);
 }
 
 
@@ -146,6 +156,14 @@
   border-radius: 8px;
   font-size: 0.85rem;
   font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.skill-badge:hover {
+  background-color: var(--primary-glow);
+  border-color: var(--primary);
+  color: var(--text-primary);
+  transform: translateY(-2px);
 }
 
 

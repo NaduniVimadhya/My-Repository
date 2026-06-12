@@ -22,7 +22,7 @@ function Contact() {
   };
 
   return (
-    <div className="contact-page">
+    <div className="contact-page page-transition">
       <div className="contact-header">
         <h2>Contact Me</h2>
       </div>
