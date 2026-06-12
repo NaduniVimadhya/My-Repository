@@ -21,7 +21,7 @@ function Home() {
 
         <div className="home-page-img-wrapper">
           <div className="home-page-img">
-            <img src="/profile.jpeg" alt="Naduni Vimadhya Profile" />
+            <img src="/profile.jpeg" />
           </div>
         </div>
       </div>

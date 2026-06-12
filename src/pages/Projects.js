@@ -5,19 +5,21 @@ function Projects() {
   const projectsData = [
     {
       title: "Charitap",
-      img: "/charitap.png",
+      img: "/Charitap.jpeg",
       desc: "A donation and community-support web application designed to connect people in need with donors. Built with a focus on making charitable giving easier, transparent, and impactful through a smart digital experience.",
       techs: ["PHP", "MySQL", "Vanilla CSS", "Web Architecture"],
       github: "https://github.com/NaduniVimadhya/Charitap"
     },
     {
       title: "Hospital Management System",
+      img: "/Hospital_Management.jpeg",
       desc: "A complete backend corporate web service engineered to handle clinical scheduling, medical records management, and real-time appointment booking workflows.",
       techs: ["Java", "Spring Boot", "Spring Data JPA", "MySQL"],
       github: "https://github.com/NaduniVimadhya/Hospital_Appointment_System"
     },
     {
       title: "Task Manager App",
+      img: "/Task_Manager.png",
       desc: "A dynamic task manager application featuring real-time task editing, persistence via Web LocalStorage, and interactive toast feedback.",
       techs: ["React.js", "CSS Grid", "LocalStorage", "Web Hooks"],
       github: "https://github.com/NaduniVimadhya"
@@ -33,6 +35,11 @@ function Projects() {
       <div className="projects-grid">
         {projectsData.map((project, idx) => (
           <div key={idx} className="project-card">
+            {project.img && (
+              <div className="project-card-image">
+                <img src={project.img} alt={project.title} />
+              </div>
+            )}
             <div className="project-card-header">
               <div className="project-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
