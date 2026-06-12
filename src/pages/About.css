@@ -22,7 +22,7 @@
 .about-header h2 {
   font-size: 2.25rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--primary);
   margin: 0;
 }
 
